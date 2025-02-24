@@ -434,7 +434,8 @@ th:hover {
 
 
 .con-table::-webkit-scrollbar {
-  width: 8px;
+  width: 5px;
+  height: 5px;
 }
 
 .con-table::-webkit-scrollbar-thumb {

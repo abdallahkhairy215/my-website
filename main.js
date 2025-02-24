@@ -427,3 +427,6 @@ document.getElementById("guarantorCheckbox").addEventListener("change", function
 
 
 
+  document.getElementById('sidebar').addEventListener('hidden.bs.offcanvas', function () {
+    document.activeElement.blur(); // إزالة التركيز من أي عنصر نشط
+});

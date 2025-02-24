@@ -28,12 +28,16 @@
     <!-- Navbar -->
     <nav class="container-fluid">
       <div class="row">
-        <div data-bs-toggle="offcanvas" data-bs-target="#sidebar" style="cursor: pointer;" class="col-1 d-md-none  mt-4">
+        <div data-bs-toggle="offcanvas" data-bs-target="#sidebar" style="cursor: pointer; width: 10px;" class="d-md-none  mt-4">
           <i style="color: #ffffff;" class="fas fa-ellipsis-v"></i>
         </div>
   
         <!-- السايد بار المخفي -->
         <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar">
+          <div class="offcanvas-header">
+            <h5 style="font-size: 14px;" class="offcanvas-title">رجوع</h5>
+            <button type="button" class="btn-close btn-sm" data-bs-dismiss="offcanvas"></button>
+          </div>
           <div class="sidebar p-3 pt-5">
             <div class="search-container mb-3">
               <input type="text" placeholder="ابحث هنا..." class="search-input">
@@ -135,7 +139,7 @@
           </div>
         </div>
   
-        <div class="col-1 pt-2 pb-2 pe-2 d-none d-lg-block d-md-block">
+        <div style="width: 30px;" class="d-none d-lg-block d-md-block">
   
           <a href="index.html">
             <img src="img/start.png" style="height: 60px;">
@@ -782,17 +786,17 @@
         <div class="modal-body">
           <ul class="list-group ms-4 ps-3">
             <div class="text-center col-12">
-              <p>حساب جديد</p>
+              <p>سداد جزء من القسط</p>
             </div>
             <div style="border-top: 1px solid #d6d6d6;">
               <form id="addAccountForm">
 
                 <div class="row">
-                  <div class="col-6">
+                  <div class="col-lg-6 col-md-12">
                     <input required type="number" class="input-search2 w-100" id="maghzon" placeholder="المبلغ">
                   </div>
 
-                  <div class="col-6">
+                  <div class="col-lg-6 col-md-12">
                     <input required type="date" class="input-search2 w-100" id="price3" placeholder="تاريخ الاستحقاق">
                   </div>
 
@@ -801,7 +805,7 @@
 
 
                 <div class="col-12 mt-2">
-                  <button type="button" class="btn btn-primary w-100" id="addAccountBtn2">اضافة</button>
+                  <button type="button" class="btn btn-primary w-100" id="addAccountBtn2">سداد</button>
                 </div>
               </form>
             </div>
@@ -822,7 +826,7 @@
         <div class="modal-body">
           <ul class="list-group ms-4 ps-3">
             <div class="text-center col-12">
-              <p>حساب جديد</p>
+              <p>تغيير تاريخ الاستحقاق</p>
             </div>
             <div style="border-top: 1px solid #d6d6d6;">
               <form id="addAccountForm">
@@ -839,7 +843,7 @@
 
 
                 <div class="col-12 mt-2">
-                  <button type="button" class="btn btn-primary w-100" id="addAccountBtn2">اضافة</button>
+                  <button type="button" class="btn btn-primary w-100" id="addAccountBtn2">حفظ التغييرات</button>
                 </div>
               </form>
             </div>
@@ -860,22 +864,22 @@
         <div class="modal-body">
           <ul class="list-group ms-4 ps-3">
             <div class="text-center col-12">
-              <p>حساب جديد</p>
+              <p>تغيير قيمة القسط</p>
             </div>
             <div style="border-top: 1px solid #d6d6d6;">
               <form id="addAccountForm">
                 <div class="row">
-                  <div class="col-6">
+                  <div class="col-lg-6 col-md-12">
                     <input required type="number" class="input-search2 w-100" id="maghzon" placeholder="المبلغ">
                   </div>
-                  <div class="col-6">
+                  <div class="col-lg-6 col-md-12">
                     <input required type="number" class="input-search2 w-100" id="price1" placeholder="المدفوع">
                   </div>
                 </div>
 
 
                 <div class="col-12 mt-2">
-                  <button type="button" class="btn btn-primary w-100" id="addAccountBtn2">اضافة</button>
+                  <button type="button" class="btn btn-primary w-100" id="addAccountBtn2">حفظ التغييرات</button>
                 </div>
               </form>
             </div>
