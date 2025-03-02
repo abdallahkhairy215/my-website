@@ -17,30 +17,27 @@ $(document).ready(function () {
     $("#asas_list2").slideUp(500);
     $("#asas_list").slideUp(500);
   });
-// =========================================
-$("#Asas4").click(function (e) {
-  e.stopPropagation();
-  $("#asas_list4").slideToggle(500);
-  $("#asas_list5").slideUp(500);
-  $("#asas_list6").slideUp(500);
-});
-$("#Asas5").click(function (h) {
-  h.stopPropagation();
-  $("#asas_list5").slideToggle(500);
-  $("#asas_list6").slideUp(500);
-  $("#asas_list4").slideUp(500);
-});
-$("#Asas6").click(function (h) {
-  h.stopPropagation();
-  $("#asas_list6").slideToggle(500);
-  $("#asas_list5").slideUp(500);
-  $("#asas_list4").slideUp(500);
-});
+  // =========================================
+  $("#Asas4").click(function (e) {
+    e.stopPropagation();
+    $("#asas_list4").slideToggle(500);
+    $("#asas_list5").slideUp(500);
+    $("#asas_list6").slideUp(500);
+  });
+  $("#Asas5").click(function (h) {
+    h.stopPropagation();
+    $("#asas_list5").slideToggle(500);
+    $("#asas_list6").slideUp(500);
+    $("#asas_list4").slideUp(500);
+  });
+  $("#Asas6").click(function (h) {
+    h.stopPropagation();
+    $("#asas_list6").slideToggle(500);
+    $("#asas_list5").slideUp(500);
+    $("#asas_list4").slideUp(500);
+  });
 
-
-
-
-// =================================================
+  // =================================================
   $(document).click(function () {
     $("#asas_list").slideUp(500);
   });
@@ -50,17 +47,16 @@ $("#Asas6").click(function (h) {
   $(document).click(function () {
     $("#asas_list3").slideUp(500);
   });
-// =================================================
-$(document).click(function () {
-  $("#asas_list4").slideUp(500);
-});
-$(document).click(function () {
-  $("#asas_list5").slideUp(500);
-});
-$(document).click(function () {
-  $("#asas_list6").slideUp(500);
-});
-
+  // =================================================
+  $(document).click(function () {
+    $("#asas_list4").slideUp(500);
+  });
+  $(document).click(function () {
+    $("#asas_list5").slideUp(500);
+  });
+  $(document).click(function () {
+    $("#asas_list6").slideUp(500);
+  });
 
   let rotated = false;
   $(".rotate").on("click", function (event) {
@@ -115,8 +111,6 @@ $(document).click(function () {
     $(".triangle3").css("transform", "rotate(0deg)");
     rotated3 = false;
   });
-  
-
 
   $(document).ready(function () {
     // تفعيل الـ Datepicker لتاريخ البداية
@@ -126,7 +120,7 @@ $(document).click(function () {
       autoclose: true,
       language: "ar",
       clearBtn: true,
-      orientation: "bottom auto", 
+      orientation: "bottom auto",
     });
     $("#endDate").datepicker({
       format: "yyyy-mm-dd",
@@ -137,9 +131,6 @@ $(document).click(function () {
       orientation: "bottom auto",
     });
   });
-
-
-
 
   $(".clint").on("click", function () {
     var selectedClient2 = $(this).data("value");
@@ -189,7 +180,6 @@ $(document).click(function () {
     $("#table-header").css("transform", "translateY(" + scrollTop + "px)");
   });
 
- 
   $(".no3").on("click", function () {
     var no3 = $(this).data("value");
     $("#no3_El_Qst").val(no3);
@@ -200,7 +190,7 @@ $(document).click(function () {
     $("#no3_El_Tawrid").val(no3);
     $("#Tawrid").modal("hide");
   });
-  
+
   $(".no3").on("click", function () {
     var no3 = $(this).data("value");
     $("#no3_El_Khazna").val(no3);
@@ -421,12 +411,26 @@ $(document).click(function () {
 
 
 
-document.getElementById("guarantorCheckbox").addEventListener("change", function () {
-    document.getElementById("guarantorFields").style.display = this.checked? "block": "none";
+document.getElementById("downloadBtn").addEventListener("click", function () {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF("p", "mm", "a4");
+  
+  html2canvas(document.querySelector("#myTable")).then((canvas) => {
+    const imgData = canvas.toDataURL("image/png");
+    doc.addImage(imgData, "PNG", 10, 10, 190, 0);
+    doc.save("table.pdf");
   });
-
-
-
-  document.getElementById('sidebar').addEventListener('hidden.bs.offcanvas', function () {
-    document.activeElement.blur(); // إزالة التركيز من أي عنصر نشط
 });
+
+document
+.getElementById("sidebar")
+.addEventListener("hidden.bs.offcanvas", function () {
+  document.activeElement.blur();
+});
+document
+  .getElementById("guarantorCheckbox")
+  .addEventListener("change", function () {
+    document.getElementById("guarantorFields").style.display = this.checked
+      ? "block"
+      : "none";
+  });

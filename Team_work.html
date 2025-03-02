@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker.min.css"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div>
+        <nav class="container-fluid">
+            <div class="row">
+                <div data-bs-toggle="offcanvas" data-bs-target="#sidebar" style="cursor: pointer; width: 10px;"
+                    class="d-md-none  mt-4">
+                    <i style="color: #ffffff;" class="fas fa-ellipsis-v"></i>
+                </div>
+
+                <!-- السايد بار المخفي -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar">
+                    <div class="offcanvas-header">
+                        <h5 style="font-size: 14px;" class="offcanvas-title">رجوع</h5>
+                        <button type="button" class="btn-close btn-sm" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <div class="sidebar p-3 pt-5">
+                        <div class="search-container mb-3">
+                            <input type="text" placeholder="ابحث هنا..." class="search-input">
+                            <button class="search-btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                        <ul class="lista">
+                            <li style="color: black;" class="rotate" id="Asas4">الاساس <div class="triangle"></div>
+                            </li>
+                        </ul>
+                        <div id="asas_list4" style="display: none;">
+                            <ul class="ul_side list-unstyled d-flex flex-column">
+                                <a href="client.html">
+                                    <li>العملاء</li>
+                                </a>
+                                <a href="make_invoices.html">
+                                    <li>انشاء فاتورة</li>
+                                </a>
+                                <a href="invoices.html">
+                                    <li>الفواتير</li>
+                                </a>
+                                <a href="All_Qest.html">
+                                    <li>الاقساط</li>
+                                </a>
+                                <a href="clients_group.html">
+                                    <li>مجموعات العملاء</li>
+                                </a>
+
+                            </ul>
+                        </div>
+                        <ul class="lista">
+                            <li style="color: black;" class="rotate2" id="Asas5">الحسابات<div class="triangle2"></div>
+                            </li>
+                        </ul>
+                        <div id="asas_list5" style="display: none;">
+                            <ul class="ul_side list-unstyled d-flex flex-column">
+                                <a href="tawridat.html">
+                                    <li>التوريدات</li>
+                                </a>
+                                <a href="khazna.html">
+                                    <li>الخزنة</li>
+                                </a>
+                                <a href="Arba7.html">
+                                    <li>الارباح</li>
+                                </a>
+                                <a href="Taqarir.html">
+                                    <li>التقارير</li>
+                                </a>
+                                <a href="masrofat.html">
+                                    <li>المصروفات</li>
+                                </a>
+                                <a href="far3ia.html">
+                                    <li>الحسابات الفرعية</li>
+                                </a>
+                                <a href="maghzon&moshtariat.html">
+                                    <li>الاصناف وكميات المخزون</li>
+                                </a>
+                                <a href="count_salles.html">
+                                    <li>حساب المشتريات والاصناف</li>
+                                </a>
+                                <a href="Al_Moarden.html">
+                                    <li>الموردين</li>
+                                </a>
+                            </ul>
+                        </div>
+                        <ul class="lista">
+                            <li style="color: black;" class="rotate3" id="Asas6">اخري <div class="triangle3"></div>
+                            </li>
+                        </ul>
+                        <div id="asas_list6" style="display: none;">
+                            <ul class="ul_side list-unstyled d-flex flex-column">
+                                <a href="sdad_aqsat.html">
+                                    <li>تسديد اقساط متعددة</li>
+                                </a>
+                                <a href="Tanpihat_Al-Aqsat.html">
+                                    <li>تنبيهات الاقساط</li>
+                                </a>
+                                <a href="">
+                                    <li>اشعارات الفروع</li>
+                                </a>
+                                <a href="Save_My_Data.html">
+                                    <li>حفظ نسخة من بياناتي</li>
+                                </a>
+                                <a href="Tatpiq_Al-3mlaa.html">
+                                    <li>تطبيق العملاء</li>
+                                </a>
+                                <a href="">
+                                    <li>الاعدادات</li>
+                                </a>
+                                <a href="">
+                                    <li>الحسابات الفرعية</li>
+                                </a>
+                                <a href="">
+                                    <li>جميع الاقساط المستحقة</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 30px;" class="d-none d-lg-block d-md-block">
+
+                    <a href="index.html">
+                        <img src="img/start.png" style="height: 60px;">
+                    </a>
+                </div>
+                <div class="col-11">
+                    <ul class="mt-4">
+                        <li>
+                            <a style="display: flex; padding-top: 1px;" href="index.html">
+                                <span class="d-none d-lg-block d-md-block"
+                                    style="font-size: 13px; color: #ffffff; display: inline;"> الصفحة </span>
+                                <span style="font-size: 13px; color: #ffffff; display: inline; padding-right: 2px;">
+                                    الرئيسية </span></a>
+                        </li>
+                        <li class="me-4 nav-item dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                الدخل
+                            </a>
+                            <ul class="dropdown-menu drop" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item drop-item" href="">صافي الربح</a></li>
+                                <li><a class="dropdown-item drop-item" href="">التكاليف</a></li>
+                                <li><a class="dropdown-item drop-item" href="">اجمالي الاقساط</a></li>
+                            </ul>
+                        </li>
+                        <li class="me-4 nav-item">
+                            <a href="client.html">العملاء</a>
+                        </li>
+                        <li class="me-4">
+                            <a href="">السلع</a>
+                        </li>
+                        <li class="me-4">
+                            <a href="">التقارير</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+        </nav>
+
+        <!-- ========================================================== -->
+        <div class="container-fluid">
+            <div class="row gx-0 w-100">
+
+                <div class="sidebar d-none d-lg-block d-md-block col-lg-2 col-md-3 p-3 pt-5">
+                    <div class="search-container mb-3">
+                        <input type="text" placeholder="ابحث هنا..." class="search-input">
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <ul class="lista">
+                        <li class="rotate" id="Asas">الاساس <div class="triangle"></div>
+                        </li>
+                    </ul>
+                    <div id="asas_list" style="display: none;">
+                        <ul class="asas">
+                            <a href="client.html">
+                                <li>العملاء</li>
+                            </a>
+                            <a href="make_invoices.html">
+                                <li>انشاء فاتورة</li>
+                            </a>
+                            <a href="invoices.html">
+                                <li>الفواتير</li>
+                            </a>
+                            <a href="All_Qest.html">
+                                <li>الاقساط</li>
+                            </a>
+                            <a href="clients_group.html">
+                                <li>مجموعات العملاء</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <ul class="lista">
+                        <li class="rotate2" id="Asas2">الحسابات<div class="triangle2"></div>
+                        </li>
+                    </ul>
+                    <div id="asas_list2" style="display: none;">
+                        <ul class="asas">
+                            <a href="tawridat.html">
+                                <li>التوريدات</li>
+                            </a>
+                            <a href="khazna.html">
+                                <li>الخزنة</li>
+                            </a>
+                            <a href="Arba7.html">
+                                <li>الارباح</li>
+                            </a>
+                            <a href="Taqarir.html">
+                                <li>التقارير</li>
+                            </a>
+                            <a href="masrofat.html">
+                                <li>المصروفات</li>
+                            </a>
+                            <a href="far3ia.html">
+                                <li>الحسابات الفرعية</li>
+                            </a>
+                            <a href="maghzon&moshtariat.html">
+                                <li>الاصناف وكميات المخزون</li>
+                            </a>
+                            <a href="count_salles.html">
+                                <li>حساب المشتريات والاصناف</li>
+                            </a>
+                            <a href="Al_Moarden.html">
+                                <li>الموردين</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <ul class="lista">
+                        <li class="rotate3" id="Asas3">اخري <div class="triangle3"></div>
+                        </li>
+                    </ul>
+                    <div id="asas_list3" style="display: none;">
+                        <ul class="asas">
+                            <a href="sdad_aqsat.html">
+                                <li>تسديد اقساط متعددة</li>
+                            </a>
+                            <a href="Tanpihat_Al-Aqsat.html">
+                                <li>تنبيهات الاقساط</li>
+                            </a>
+                            <a href="">
+                                <li>اشعارات الفروع</li>
+                            </a>
+                            <a href="Save_My_Data.html">
+                                <li>حفظ نسخة من بياناتي</li>
+                            </a>
+                            <a href="Tatpiq_Al-3mlaa.html">
+                                <li>تطبيق العملاء</li>
+                            </a>
+                            <a href="">
+                                <li>الاعدادات</li>
+                            </a>
+                            <a href="">
+                                <li>الحسابات الفرعية</li>
+                            </a>
+                            <a href="Team_work.html">
+                                <li>شركتنا</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <!-- ========================================================== -->
+                <div class="content col-lg-10 col-md-9 col-sm-12 pt-3">
+                    <div class="container-fluid mb-1">
+                        <div class="row">
+                            <div class="col-12 pt-1">
+                                <h2 style="font-size: 14px; color: black;"><a href="index.html"><i
+                                            class="fa fa-home"></i></a>/<a href="Team_work.html">
+                                        <span style="font-size: 14px;">شركتنا</span>
+                                    </a> /
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ======================================================= -->
+                    <div style="background: #fafafa;border-radius: 10px; min-height: calc(100vh - 110px);box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
+                        class="container-fluid pt-4">
+                        <div class="container">
+                            <div class="row">
+                                <div style="transform: scale(0.8);" class="col-lg-6 col-md-12 pt-5">
+                                    <h2 data-aos="fade-left" class="mb-4 mt-4" style="font-size: 20px;">شركتنا</h2>
+                                    <p data-aos="fade-left">نحن شركة رائدة في مجال التقنية، نسعى لتقديم حلول مبتكرة
+                                        تساعد عملائنا على النمو والتطور في عالم رقمي سريع التغير.</p>
+                                    <p data-aos="fade-left" class="pe-3">
+                                        <i style="font-size: 14px;" class="fas fa-eye mt-1"></i>
+                                        <span style="font-size: 18px;">رؤيتنا</span>
+                                        <br>
+                                        أن نكون الشريك الأول في التحول الرقمي للشركات في المنطقة
+                                    </p>
+                                    <p data-aos="fade-left" class="pe-3">
+                                        <i style="font-size: 14px;" class="fas fa-bullseye text-custom mt-1"></i>
+                                        <span style="font-size: 18px;">رسالتنا</span>
+                                        <br>
+                                        تمكين عملائنا من خلال التقنيات المتقدمة وتقديم حلول مبتكرة
+                                    </p>
+                                </div>
+                                <div style="transform: scale(0.8);" class="col-lg-6 col-md-12">
+                                    <img data-aos="fade-right" style="border-radius: 6px;" class="w-100"
+                                        src="img/4a73f2f3-872b-4197-810c-6c28a2b92a10.jpg" alt="">
+                                </div>
+
+
+                                <h2 data-aos="fade-down" style="font-size: 25px;" class="text-center">انجازتنا</h2>
+                                <h5 data-aos="fade-up" style="font-size: 14px;" class="text-center">نفخر بما حققناه من
+                                    نجاحات مع عملائنا</h5>
+                                <div class="row pt-4">
+                                    <div data-aos="fade-left" style="height: 350px;" class="col-lg-4 col-md-12">
+                                        <div
+                                            style="width: 100%; height: 60%; background-image: url(img/f71ed5cd-78de-4c36-8f6c-cc434fd426d1.jpg);background-position: center; background-size: contain; border-radius: 6px;margin-top: 3px;">
+                                        </div>
+                                        <div class="row pe-3 pt-2">
+                                            <div style="background:#dedede ; width: 50px; border-radius: 6px;">
+                                                <span style="font-size: 12px;">2025</span>
+                                            </div>
+                                            <div class="me-2"
+                                                style="background:#dedede ; width: 75px; border-radius: 6px;">
+                                                <span style="font-size: 12px;">نظم ادارة</span>
+                                            </div>
+                                            <div class="mt-4">
+                                                <h4 style="font-size: 17px;">نظام إدارة الموارد</h4>
+                                                <p style="font-size: 14px;">نظام متكامل لإدارة موارد الشركات والمؤسسات
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="fade-down" style="height: 350px;" class="col-lg-4 col-md-12">
+                                        <div
+                                            style="width: 100%; height: 60%; background-image: url(img/a6a4bb81-6c63-4a5a-8470-e1cd1a5e137d.jpg);background-position: center; background-size: contain; border-radius: 6px;margin-top: 3px;">
+                                        </div>
+                                        <div class="row pe-3 pt-2">
+                                            <div style="background:#dedede ; width: 50px; border-radius: 6px;">
+                                                <span style="font-size: 12px;">2025</span>
+                                            </div>
+                                            <div class="me-2"
+                                                style="background:#dedede ; width: 95px; border-radius: 6px;">
+                                                <span style="font-size: 12px;">تطبيقات جوال</span>
+                                            </div>
+                                            <div class="mt-4">
+                                                <h4 style="font-size: 17px;">تطبيق الخدمات المنزلية</h4>
+                                                <p style="font-size: 14px;">تطبيق يربط مقدمي الخدمات المنزلية بالعملاء
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="fade-right" style="height: 350px;" class="col-lg-4 col-md-12">
+                                        <div
+                                            style="width: 100%; height: 60%; background-image:url(img/03a5b00a-7478-4008-8360-00840b0b052a.jpg);background-position: center; background-size: contain; border-radius: 6px;margin-top: 3px;">
+                                        </div>
+                                        <div class="row pe-3 pt-2">
+                                            <div style="background:#dedede ; width: 50px; border-radius: 6px;">
+                                                <span style="font-size: 12px;">2025</span>
+                                            </div>
+                                            <div class="me-2"
+                                                style="background:#dedede ; width: 90px; border-radius: 6px;">
+                                                <span style="font-size: 12px;">تطوير مواقع</span>
+                                            </div>
+                                            <div class="mt-4">
+                                                <h4 style="font-size: 17px;">تطوير منصة التجارة الإلكترونية</h4>
+                                                <p style="font-size: 14px;">منصة متكاملة للتجارة الإلكترونية تخدم أكثر
+                                                    من 1000 تاجر</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <footer style="transform: scale(0.95);" class="mt-5 pt-5">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6 col-sm-12 pt-2">
+                                    <div style="width: 100%; height: 80px;">
+                                        <img style="height: 100%;"
+                                            src="img/WhatsApp Image 2025-01-08 at 11.48.38 AM (1).jpeg" alt="">
+                                    </div>
+                                    <div>
+                                        <p>نحن نساعد الشركات على النمو من خلال الحلول الرقمية المبتكرة</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12 pt-2">
+                                    <h5 style="font-size: 18px;" class="text-center w-50 mb-3">روابط سريعة</h5>
+                                    <ul class="footer_ul">
+                                        <a href="">
+                                            <li>عن الشركة</li>
+                                        </a>
+                                        <a href="">
+                                            <li>خدماتنا</li>
+                                        </a>
+                                        <a href="">
+                                            <li>مشاريعنا</li>
+                                        </a>
+                                        <a href="">
+                                            <li>اتصل بنا</li>
+                                        </a>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12 pt-2">
+                                    <h5 style="font-size: 18px;" class="text-center w-50 mb-3">تواصل معنا</h5>
+                                    <ul class="footer_ul">
+                                        <li><i class="fas fa-map-marker-alt text-custom ms-2"></i>كفر الشيخ / النبوي
+                                            المهندس</li>
+                                        <li><i class="fas fa-phone text-custom ms-2"></i>01040304506</li>
+                                        <li><i class="fas fa-envelope text-custom ms-2"></i>126545@gmail.com</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12 pt-2">
+                                    <h5 style="font-size: 18px;" class="text-center w-25 mb-3">تابعنا</h5>
+                                    <div class="iconat">
+                                        <a class="text-gray-400 hover:text-white" href=""><i
+                                                class="fab fa-twitter text-xl"></i></a>
+                                        <a class="text-gray-400 hover:text-white" href=""><i
+                                                class="fab fa-facebook text-xl"></i></a>
+                                        <a class="text-gray-400 hover:text-white" href=""><i
+                                                class="fab fa-instagram text-xl"></i></a>
+                                        <a class="text-gray-400 hover:text-white" href=""><i
+                                                class="fab fa-linkedin text-xl"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="jquery-3.6.3.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- مكتبة jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

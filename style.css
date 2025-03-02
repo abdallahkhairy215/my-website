@@ -609,3 +609,16 @@ td {
   font-size: 13px;
   display: block;
 }
+
+.footer_ul{
+  list-style: none;
+}
+.footer_ul li{
+  margin-bottom: 10px;
+}
+.footer_ul a{
+  color: black;
+}
+.iconat a{
+  margin-left:10px ;
+}
